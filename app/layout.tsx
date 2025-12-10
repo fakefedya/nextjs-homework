@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { Noto_Sans, Open_Sans } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import './globals.css'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
 	title: 'Мой блог',
 	description: 'Описание к главной странице блога',
 }
 
-const notoSans = Noto_Sans({
+const openSans = Open_Sans({
 	subsets: ['cyrillic'],
 })
 
@@ -18,7 +19,22 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={notoSans.className}>{children}</body>
+			<body className={openSans.className}>
+				<div className='page-wrapper'>
+					<header className='header'>
+						<div className='header-container'>
+							<span className='header-logo'>.my_blog</span>
+							<Image
+								src='/icons/github.svg'
+								width={24}
+								height={24}
+								alt='Иконка'
+							/>
+						</div>
+					</header>
+					{children}
+				</div>
+			</body>
 		</html>
 	)
 }
