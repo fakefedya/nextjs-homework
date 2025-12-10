@@ -1,0 +1,16 @@
+.like {
+	display: flex;
+	gap: 4px;
+	align-items: end;
+
+	border: none;
+
+	background: none;
+
+	& span {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: normal;
+		color: var(--gray);
+	}
+}

@@ -1,66 +1,63 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Card } from '@/components/Card/Card'
+import styles from './page.module.css'
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+	const cardsInfo = [
+		{
+			id: 1,
+			theme: 'Front-end',
+			timestamp: '1 месяц назад',
+			likesCount: 1,
+			heading: 'Как работать с CSS Grid',
+			paragraph:
+				'Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..',
+			timeToRead: '3 минуты',
+			imageSRC: './images/css-grid.png',
+			link: '/123',
+		},
+		{
+			id: 2,
+			theme: 'Front-end',
+			timestamp: '1 месяц назад',
+			likesCount: 4,
+			heading: 'Как работать с CSS Grid',
+			paragraph:
+				'Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..',
+			timeToRead: '3 минуты',
+			imageSRC: './images/css-grid.png',
+			link: '/',
+		},
+		{
+			id: 3,
+			theme: 'Front-end',
+			timestamp: '1 месяц назад',
+			likesCount: 4,
+			heading: 'Как работать с CSS Grid',
+			paragraph:
+				'Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..',
+			timeToRead: '3 минуты',
+			imageSRC: './images/css-grid.png',
+			link: '/',
+		},
+	]
+
+	return (
+		<section className={styles.section}>
+			<div className={styles.cardGrid}>
+				{cardsInfo.map((card) => (
+					<Card
+						key={card.id}
+						theme={card.theme}
+						timestamp={card.timestamp}
+						likesCount={card.likesCount}
+						heading={card.heading}
+						paragraph={card.paragraph}
+						timeToRead={card.timeToRead}
+						imageSRC={card.imageSRC}
+						link={card.link}
+					/>
+				))}
+			</div>
+		</section>
+	)
 }
