@@ -7,14 +7,15 @@ import LikeIcon from './like.svg'
 
 interface LikeProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	isLiked: boolean
+	onToggle: () => void
 }
 
-export const Like: React.FC<LikeProps> = ({ isLiked, ...props }) => {
+export const Like: React.FC<LikeProps> = ({ isLiked, onToggle, ...props }) => {
 	const [isActive, setIsActive] = useState<boolean>(isLiked)
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		event.preventDefault()
-		// Функция для ПАТЧ, на данном этапе мы еще не прошли подобное в курсе
+		onToggle()
 		setIsActive((prev) => !prev)
 	}
 

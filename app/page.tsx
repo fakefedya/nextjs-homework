@@ -1,6 +1,7 @@
 import { Card } from '@/components/Card/Card'
 import styles from './page.module.css'
 import { Like } from '@/components/Like/Like'
+import { Post } from '@/components/Post/Post'
 
 export default function Home() {
 	const cardsInfo = [
@@ -62,7 +63,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className={styles.section}>
-				<Like isLiked={true} />
+				<Post />
 			</section>
 		</>
 	)
