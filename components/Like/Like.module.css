@@ -1,0 +1,25 @@
+.likeButton {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	stroke: 1px solid var(--black-variant);
+	border-radius: 50%;
+	cursor: pointer;
+
+	svg {
+		height: 16px;
+		width: 16px;
+		stroke: var(--black-variant);
+	}
+
+	&.liked {
+		background: var(--black-variant);
+
+		svg {
+			stroke: var(--white);
+		}
+	}
+}
