@@ -1,5 +1,7 @@
 import { Card } from '@/components/Card/Card'
 import styles from './page.module.css'
+import { Like } from '@/components/Like/Like'
+import { Post } from '@/components/Post/Post'
 
 export default function Home() {
 	const cardsInfo = [
@@ -42,22 +44,27 @@ export default function Home() {
 	]
 
 	return (
-		<section className={styles.section}>
-			<div className={styles.cardGrid}>
-				{cardsInfo.map((card) => (
-					<Card
-						key={card.id}
-						theme={card.theme}
-						timestamp={card.timestamp}
-						likesCount={card.likesCount}
-						heading={card.heading}
-						paragraph={card.paragraph}
-						timeToRead={card.timeToRead}
-						imageSRC={card.imageSRC}
-						link={card.link}
-					/>
-				))}
-			</div>
-		</section>
+		<>
+			<section className={styles.section}>
+				<div className={styles.cardGrid}>
+					{cardsInfo.map((card) => (
+						<Card
+							key={card.id}
+							theme={card.theme}
+							timestamp={card.timestamp}
+							likesCount={card.likesCount}
+							heading={card.heading}
+							paragraph={card.paragraph}
+							timeToRead={card.timeToRead}
+							imageSRC={card.imageSRC}
+							link={card.link}
+						/>
+					))}
+				</div>
+			</section>
+			<section className={styles.section}>
+				<Post />
+			</section>
+		</>
 	)
 }
