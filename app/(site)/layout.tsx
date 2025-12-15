@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
-import Image from 'next/image'
+import { Header } from '@/components/layout/Header/Header'
 
 export const metadata: Metadata = {
 	title: 'Мой блог',
@@ -20,19 +20,11 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<body className={openSans.className}>
-				<div className='page-wrapper'>
-					<header className='header'>
-						<div className='header-container'>
-							<span className='header-logo'>.my_blog</span>
-							<Image
-								src='/icons/github.svg'
-								width={24}
-								height={24}
-								alt='Иконка'
-							/>
-						</div>
-					</header>
-					{children}
+				<div className='app'>
+					<Header />
+					<main>
+						<div className='page-wrapper'>{children}</div>
+					</main>
 				</div>
 			</body>
 		</html>

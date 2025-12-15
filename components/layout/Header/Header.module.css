@@ -1,0 +1,19 @@
+.header {
+	width: 100%;
+	max-width: 1205px;
+	margin: 0 auto;
+}
+
+.headerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.headerLogo {
+	font-size: 40px;
+	font-weight: 300;
+	line-height: normal;
+	color: var(--black);
+}
