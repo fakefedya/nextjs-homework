@@ -7,11 +7,7 @@ interface LikesProps {
 	classname?: string
 }
 
-export const Likes: React.FC<LikesProps> = ({
-	count = 0,
-	classname,
-	...props
-}) => {
+export function Likes({ count = 0, classname, ...props }: LikesProps) {
 	return (
 		<div className={cn(styles.like, classname)} {...props}>
 			<span>{count}</span>

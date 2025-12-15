@@ -21,24 +21,12 @@
 	background: var(--white);
 }
 
-.header {
-	width: 100%;
-}
-
-.header-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px;
-}
-
-.header-logo {
-	font-size: 40px;
-	font-weight: 300;
-	line-height: normal;
-	color: var(--black);
-}
-
 button {
 	font-family: inherit;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }

@@ -2,7 +2,7 @@
 
 import { Like } from '../Like/Like'
 
-export const Post: React.FC = () => {
+export function Post() {
 	const handleToggleLike = async (postId: number, isLiked: boolean) => {
 		console.log('PATCH')
 		try {

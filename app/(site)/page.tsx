@@ -1,7 +1,7 @@
-import { Card } from '@/components/Card/Card'
+import { Card } from '@/components/ui/Card/Card'
 import styles from './page.module.css'
-import { Like } from '@/components/Like/Like'
-import { Post } from '@/components/Post/Post'
+import { Like } from '@/components/ui/Like/Like'
+import { Post } from '@/components/ui/Post/Post'
 
 export default function Home() {
 	const cardsInfo = [

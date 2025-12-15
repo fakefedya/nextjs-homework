@@ -16,7 +16,7 @@ interface CardProps {
 	classname?: string
 }
 
-export const Card: React.FC<CardProps> = ({ ...props }) => {
+export function Card({ ...props }: CardProps) {
 	return (
 		<article className={cn(styles.card, props.classname)}>
 			<div className={styles.container}>
