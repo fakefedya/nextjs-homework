@@ -1,8 +1,8 @@
 import cn from 'classnames'
 import styles from './Card.module.css'
 import Image from 'next/image'
-import { Likes } from '../Likes/Likes'
 import Link from 'next/link'
+import { Likes } from '@/components/ui/Likes/Likes'
 
 interface CardProps {
 	theme: string

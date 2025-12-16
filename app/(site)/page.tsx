@@ -1,7 +1,8 @@
-import { Card } from '@/components/ui/Card/Card'
+import { Card } from '@/components/layout/Card/Card'
 import styles from './page.module.css'
 import { Like } from '@/components/ui/Like/Like'
 import { Post } from '@/components/ui/Post/Post'
+import { PostsSection } from '@/components/layout/PostsSection/PostsSection'
 
 export default function Home() {
 	const cardsInfo = [
@@ -62,9 +63,7 @@ export default function Home() {
 					))}
 				</div>
 			</section>
-			<section className={styles.section}>
-				<Post />
-			</section>
+			<PostsSection />
 		</>
 	)
 }
