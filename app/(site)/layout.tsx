@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header/Header'
+import { ResourceProvider } from '@/context/ResourceContext'
 
 export const metadata: Metadata = {
 	title: 'Мой блог',
@@ -20,12 +21,14 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<body className={openSans.className}>
-				<div className='app'>
-					<Header />
-					<main>
-						<div className='page-wrapper'>{children}</div>
-					</main>
-				</div>
+				<ResourceProvider>
+					<div className='app'>
+						<Header />
+						<main>
+							<div className='page-wrapper'>{children}</div>
+						</main>
+					</div>
+				</ResourceProvider>
 			</body>
 		</html>
 	)
