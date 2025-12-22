@@ -12,6 +12,7 @@ export async function PostsSection() {
 				{posts.map((el) => (
 					<Post
 						key={el.id}
+						id={el.id}
 						userId={el.userId}
 						title={el.title}
 						body={el.body}
