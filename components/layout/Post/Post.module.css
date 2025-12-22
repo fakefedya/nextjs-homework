@@ -5,12 +5,14 @@
 }
 
 .userId {
-	font-size: 12;
-	font-weight: 600;
-	background-color: var(--blue-light);
-	color: var(--black);
 	padding: 5px 10px;
 	border-radius: 4px;
+
+	font-size: 12;
+	font-weight: 600;
+	color: var(--black);
+
+	background-color: var(--blue-light);
 }
 
 .title {
