@@ -1,0 +1,32 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.postInformation {
+	display: grid;
+	grid-template-columns: auto auto auto 1fr;
+	gap: 10px;
+}
+
+.userId,
+.id {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: normal;
+	color: var(--gray);
+
+	&::after {
+		content: '';
+		background: var(--gray-variant);
+		border-radius: 50%;
+		width: 2px;
+		height: 2px;
+		display: inline-block;
+	}
+}

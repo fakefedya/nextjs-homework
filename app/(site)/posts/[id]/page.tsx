@@ -1,3 +1,4 @@
+import { PostPageWrapper } from '@/components/layout/PostPageWrapper/PostPageWrapper'
 import { getPostById } from '@/lib/postById'
 import { getPosts } from '@/lib/posts'
 import { notFound } from 'next/navigation'
@@ -18,5 +19,9 @@ export default async function PostPage({
 	const post = await getPostById((await params).id)
 	if (!post) notFound()
 
-	return <h1>{post.id}</h1>
+	return (
+		<>
+			<PostPageWrapper post={post} />
+		</>
+	)
 }
