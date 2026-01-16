@@ -11,7 +11,12 @@ interface LikeProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	onLikeToggle: (postId: number, isLiked: boolean) => void
 }
 
-export function Like({ isLiked, onLikeToggle, postId, ...props }: LikeProps) {
+export function Like({
+	isLiked = false,
+	onLikeToggle,
+	postId,
+	...props
+}: LikeProps) {
 	const [isActive, setIsActive] = useState<boolean>(isLiked)
 
 	useEffect(() => {

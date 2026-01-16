@@ -30,3 +30,53 @@
 		display: inline-block;
 	}
 }
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.commentsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.comment {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.commentHeader {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.commentName {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.commentEmail {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: normal;
+	color: var(--gray);
+}
+
+.commentBody {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.like {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
