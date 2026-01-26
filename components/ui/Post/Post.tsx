@@ -12,7 +12,7 @@ export function Post() {
 				body: JSON.stringify({ liked: isLiked }),
 			})
 		} catch (e) {
-			// 3) откат при ошибке
+			// откат при ошибке
 		}
 	}
 

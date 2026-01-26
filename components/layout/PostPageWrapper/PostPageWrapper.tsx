@@ -8,6 +8,7 @@ import { Likes } from '@/components/ui/Likes/Likes'
 import Image from 'next/image'
 import { CommentProps } from '@/interfaces/comment.interface'
 import { Like } from '@/components/ui/Like/Like'
+import { CommentForm } from '../CommentForm/CommentForm'
 
 interface PostPageWrapperProps {
 	post: PostProps
@@ -60,6 +61,7 @@ export function PostPageWrapper({ post, comments }: PostPageWrapperProps) {
 			) : (
 				<div>Комментарии отсутствуют</div>
 			)}
+			<CommentForm postId={post.id} />
 		</>
 	)
 }
