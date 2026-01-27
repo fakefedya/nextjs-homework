@@ -2,7 +2,6 @@ import { PostProps } from '@/interfaces/post.interface'
 
 import styles from './Post.module.css'
 import Link from 'next/link'
-import { API } from '@/lib/api'
 
 export function Post({ ...props }: PostProps) {
 	return (

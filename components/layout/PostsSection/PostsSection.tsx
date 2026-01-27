@@ -2,23 +2,22 @@ import { getPosts } from '@/lib/posts'
 import { Post } from '../Post/Post'
 
 import styles from './PostsSection.module.css'
+import { itemVariants, MotionItem, MotionWrapper } from './MotionWrapper'
 
 export async function PostsSection() {
 	const posts = await getPosts()
 
 	return (
 		<section>
-			<div className={styles.grid}>
-				{posts.map((el) => (
-					<Post
-						key={el.id}
-						id={el.id}
-						userId={el.userId}
-						title={el.title}
-						body={el.body}
-					/>
-				))}
-			</div>
+			<MotionWrapper>
+				<div className={styles.grid}>
+					{posts.map((el) => (
+						<MotionItem key={el.id} variants={itemVariants}>
+							<Post {...el} />
+						</MotionItem>
+					))}
+				</div>
+			</MotionWrapper>
 		</section>
 	)
 }
