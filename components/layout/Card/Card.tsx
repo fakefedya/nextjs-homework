@@ -43,7 +43,9 @@ export function Card({ ...props }: CardProps) {
 					<div className={styles.footer}>
 						<span className={styles.time}>{props.timeToRead}</span>
 						<Link className={styles.link} href={props.link}>
-							<span className={styles.linkText}>Читать</span>
+							<span className={styles.linkText} aria-label='Читать'>
+								Читать
+							</span>
 							<Image
 								src={'/icons/arrow.svg'}
 								alt='Иконка стрелки'
