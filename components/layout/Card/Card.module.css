@@ -111,3 +111,9 @@
 	line-height: normal;
 	color: var(--blue);
 }
+
+.link:focus-visible {
+	outline: 3px solid var(--blue);
+	outline-offset: 3px;
+	border-radius: 6px;
+}

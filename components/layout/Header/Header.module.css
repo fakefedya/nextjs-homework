@@ -17,3 +17,9 @@
 	line-height: normal;
 	color: var(--black);
 }
+
+.headerContainer a:focus-visible {
+	outline: 3px solid var(--blue);
+	outline-offset: 3px;
+	border-radius: 6px;
+}

@@ -36,6 +36,7 @@ export function Like({
 			className={cn(styles.likeButton, {
 				[styles.liked]: isActive,
 			})}
+			aria-label='Кнопка лайка'
 			{...props}
 		>
 			<LikeIcon />

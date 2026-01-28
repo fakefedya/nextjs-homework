@@ -27,3 +27,8 @@
 		}
 	}
 }
+
+.likeButton:focus-visible {
+	outline: 3px solid var(--blue);
+	outline-offset: 3px;
+}
